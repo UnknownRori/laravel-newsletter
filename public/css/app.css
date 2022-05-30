@@ -435,6 +435,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 1rem;
   margin-right: 1rem;
 }
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .ml-auto {
   margin-left: auto;
 }
@@ -449,6 +457,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-\[100\%\] {
   width: 100%;
+}
+.w-\[60\%\] {
+  width: 60%;
 }
 .flex-row {
   flex-direction: row;
@@ -481,6 +492,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 .font-bold {
   font-weight: 700;
