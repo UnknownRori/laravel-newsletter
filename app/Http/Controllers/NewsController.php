@@ -15,7 +15,9 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
+        return inertia('Home', [
+            'news' => News::all()
+        ]);
     }
 
     /**
