@@ -1,0 +1,29 @@
+<template>
+    <nav class='bg-sky-400 p-4'>
+        <div class='flex flex-row place-content-between text-white w-[80%] m-auto'>
+            <h2 class='text-2xl'>
+                Newsletter
+            </h2>
+            <ul class='flex flex-row'>
+                <li class='mx-2'>
+                    <Link href='/' :class='{ "font-bold underline": $page.component == "Home" }'>Home</Link>
+                </li>
+                <li class='mx-2'>
+                    <Link href='/news'>News</Link>
+                </li>
+                <li class='mx-2'>
+                    <Link href='/dashboard'>Dashboard</Link>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</template>
+
+<script>
+import { Link } from '@inertiajs/inertia-vue3';
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+    components: { Link }
+});
+</script>
