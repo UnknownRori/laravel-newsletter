@@ -19,10 +19,10 @@
 
                 <ul class='flex flex-row-reverse'>
                     <li class='mx-2'>
-                        <Link href='/dashboard'>Logout</Link>
+                        <Link href='/auth/logout' method='post'>Logout</Link>
                     </li>
                     <li class='mx-2'>
-                        <Link href='/dashboard'>John Doe</Link>
+                        John Doe
                     </li>
                 </ul>
             </div>
