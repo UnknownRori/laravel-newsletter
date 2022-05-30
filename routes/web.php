@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return inertia('Home');
+Route::get('/', [NewsController::class, 'index']);
+
+Route::prefix('auth')->group(function () {
+    Route::post('login', [UserController::class, 'login']);
+    Route::post('logout', [UserController::class, 'logout']);
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('dashboard', [NewsController::class, 'dashboard']);
 });
