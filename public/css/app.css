@@ -503,9 +503,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-full {
   width: 100%;
 }
-.w-\[40\%\] {
-  width: 40%;
-}
 .flex-row {
   flex-direction: row;
 }
@@ -591,14 +588,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(186 230 253 / var(--tw-ring-opacity));
 }
-
-
 .hover\:text-sky-700:hover {
   --tw-text-opacity: 1;
   color: rgb(3 105 161 / var(--tw-text-opacity));
 }
-
-
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
