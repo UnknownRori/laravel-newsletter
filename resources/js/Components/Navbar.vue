@@ -20,7 +20,7 @@
 
                 <ul class='flex flex-row-reverse'>
                     <li class='mx-2' v-if='$page.props.auth'>
-                        <Link href='/auth/logout' method='post'>Logout</Link>
+                        <Link href='/auth/logout' method='post' as='button'>Logout</Link>
                     </li>
                     <li class='mx-2' v-if='$page.props.auth'>
                         {{ $page.props.auth.name }}
