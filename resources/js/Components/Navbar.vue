@@ -10,10 +10,11 @@
                         <Link href='/' :class='{ "font-bold underline": $page.component == "Home" }'>Home</Link>
                     </li>
                     <li class='mx-2'>
-                        <Link href='/news'>News</Link>
+                        <Link href='/news' :class='{ "font-bold underline": $page.component == "News" }'>News</Link>
                     </li>
                     <li class='mx-2'>
-                        <Link href='/dashboard'>Dashboard</Link>
+                        <Link href='/dashboard' :class='{ "font-bold underline": $page.component == "Dashboard" }'>
+                        Dashboard</Link>
                     </li>
                 </ul>
 
