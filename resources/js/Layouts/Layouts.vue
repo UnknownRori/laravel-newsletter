@@ -3,7 +3,7 @@
         <Navbar />
     </section>
 
-    <section>
+    <section class='w-[60%] mx-auto'>
         <slot />
     </section>
 </template>
