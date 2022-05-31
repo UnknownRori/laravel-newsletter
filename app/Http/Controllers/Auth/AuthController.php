@@ -28,5 +28,7 @@ class AuthController extends Controller
         Auth::logout();
 
         $request->session()->invalidate();
+
+        return redirect('/auth/login');
     }
 }
