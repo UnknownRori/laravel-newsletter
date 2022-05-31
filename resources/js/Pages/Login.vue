@@ -23,6 +23,11 @@
                             form.errors.password
                     }}</div>
                 </div>
+                <div class="form-control" v-if='$page.props.flash.error'>
+                    <span class='bg-red-500 text-white rounded p-2'>
+                        {{ $page.props.flash.error }}
+                    </span>
+                </div>
                 <div class="form-control">
                     <button type="submit" :disabled="form.processing">Login</button>
                 </div>
