@@ -18,11 +18,14 @@
                 </ul>
 
                 <ul class='flex flex-row-reverse'>
-                    <li class='mx-2'>
+                    <li class='mx-2' v-if='$page.props.auth'>
                         <Link href='/auth/logout' method='post'>Logout</Link>
                     </li>
-                    <li class='mx-2'>
-                        John Doe
+                    <li class='mx-2' v-if='$page.props.auth'>
+                        {{ $page.props.auth.name }}
+                    </li>
+                    <li class='mx-2' v-else>
+                        <Link href='/auth/login'>Login</Link>
                     </li>
                 </ul>
             </div>
