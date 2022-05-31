@@ -1,7 +1,7 @@
 <template>
 
     <Head>
-        <title>Home</title>
+        <title>News</title>
     </Head>
 
     <Layouts>
@@ -16,7 +16,6 @@ import { Head } from "@inertiajs/inertia-vue3";
 import { defineComponent } from "vue";
 import Layouts from '../Layouts/Layouts';
 import News from "../Components/News.vue";
-
 
 export default defineComponent({
     components: { Layouts, Head, News },
