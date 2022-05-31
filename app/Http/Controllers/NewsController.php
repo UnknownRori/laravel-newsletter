@@ -16,7 +16,7 @@ class NewsController extends Controller
     public function index()
     {
         return inertia('Home', [
-            'news' => News::with('user')->get()
+            'news' => News::with('user')->paginate(5)
         ]);
     }
 
