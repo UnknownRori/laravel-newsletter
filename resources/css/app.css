@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .form-control {
+        @apply flex flex-col self-stretch p-4;
+    }
+
+    .form-control>label {
+        @apply text-sky-700;
+    }
+
+    .form-control>input {
+        @apply p-2 border-2 border-slate-200 rounded bg-gray-100;
+    }
+
+    .form-control>button {
+        @apply bg-sky-400 hover:bg-sky-700 text-white rounded ring-1 ring-sky-200 p-2 w-16 text-center;
+    }
+}
