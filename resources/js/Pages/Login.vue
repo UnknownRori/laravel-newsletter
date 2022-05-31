@@ -6,19 +6,25 @@
 
     <Layouts>
         <div class="h-[85vh] w-full flex justify-center">
-            <form action="/auth/auth" method="post"
+            <form @submit.prevent="form.post('/auth/auth')" method="post"
                 class='bg-white shadow-xl ring-1 ring-sky-200 p-5 flex flex-col w-[40%] self-center m-auto rounded'>
                 <h2 class='text-3xl text-sky-500 text-center my-4'>Login</h2>
                 <div class="form-control">
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder='Enter Username'>
+                    <input v-model='form.name' type="text" name="name" id="name" placeholder='Enter Username'>
+                    <div v-if="form.errors.name" class='bg-red-500 my-2 rounded text-white p-2'>{{ form.errors.name }}
+                    </div>
                 </div>
                 <div class="form-control">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder='Enter Password'>
+                    <input v-model='form.password' type="password" name="password" id="password"
+                        placeholder='Enter Password'>
+                    <div v-if="form.errors.password" class='bg-red-500 my-2 rounded text-white p-2'>{{
+                            form.errors.password
+                    }}</div>
                 </div>
                 <div class="form-control">
-                    <Link href='/auth/auth' method='post'>Login</Link>
+                    <button type="submit" :disabled="form.processing">Login</button>
                 </div>
             </form>
         </div>
@@ -27,11 +33,21 @@
 </template>
 
 <script>
-import { Head, Link } from "@inertiajs/inertia-vue3";
+import { Head, Link, useForm } from "@inertiajs/inertia-vue3";
 import Layouts from "../Layouts/Layouts.vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
     components: { Head, Link, Layouts },
+    setup() {
+        const form = useForm({
+            name: '',
+            password: '',
+        });
+
+        return {
+            form
+        };
+    }
 });
 </script>
