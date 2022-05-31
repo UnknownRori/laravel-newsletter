@@ -49,7 +49,10 @@ class NewsController extends Controller
      */
     public function show(News $news)
     {
-        //
+        return inertia('Post', [
+            'news' => $news,
+            'author' => $news->user->name
+        ]);
     }
 
     /**
