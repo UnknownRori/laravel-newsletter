@@ -22,7 +22,7 @@ Route::get('/', HomeController::class);
 
 Route::prefix('auth')->group(function () {
     Route::middleware('guest')->group(function () {
-        Route::get('login', [AuthController::class, 'login']);
+        Route::get('login', [AuthController::class, 'login'])->name('login');
         Route::post('auth', [AuthController::class, 'auth']);
     });
     Route::post('logout', [AuthController::class, 'logout'])->middleware('auth');
