@@ -18,8 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [NewsController::class, 'index']);
 
 Route::prefix('auth')->group(function () {
-    Route::post('login', [UserController::class, 'login']);
-    Route::post('logout', [UserController::class, 'logout']);
+    Route::middleware('guest')->group(function () {
+        Route::get('login', [UserController::class, 'login']);
+        Route::post('auth', [UserController::class, 'auth']);
+    });
+    Route::post('logout', [UserController::class, 'logout'])->middleware('auth');
 });
 
 Route::middleware('auth')->group(function () {
