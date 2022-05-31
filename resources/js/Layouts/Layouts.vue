@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Navbar from '../Components/Navbar';
+import Navbar from '../Shared/Navbar';
 import { defineComponent } from 'vue';
 
 export default defineComponent({

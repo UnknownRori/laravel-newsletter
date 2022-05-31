@@ -9,8 +9,8 @@
 
 <script>
 import { defineComponent } from "vue";
-import Post from "../Components/Post.vue";
-import PaginateButton from "./PaginateButton.vue";
+import Post from "./Post.vue";
+import PaginateButton from "../Shared/PaginateButton.vue";
 
 export default defineComponent({
     components: { Post, PaginateButton },
