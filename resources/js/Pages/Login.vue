@@ -7,7 +7,7 @@
     <Layouts>
         <div class="h-[85vh] w-full flex justify-center">
             <form @submit.prevent="form.post('/auth/auth')" method="post"
-                class='bg-white shadow-xl ring-1 ring-sky-200 p-5 flex flex-col w-[40%] self-center m-auto rounded'>
+                class='bg-white shadow-xl ring-1 ring-sky-200 p-5 flex flex-col w-[60%] self-center m-auto rounded'>
                 <h2 class='text-3xl text-sky-500 text-center my-4'>Login</h2>
                 <div class="form-control">
                     <label for="name">Name</label>
