@@ -30,7 +30,7 @@ Route::prefix('auth')->group(function () {
             Route::post('signup', [UserController::class, 'store'])->name('store');
         });
     });
-    Route::post('logout', [AuthController::class, 'logout'])->middleware('auth');
+    Route::post('logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 });
 
 Route::resource('news', NewsController::class)->only(['show', 'index'])->scoped([

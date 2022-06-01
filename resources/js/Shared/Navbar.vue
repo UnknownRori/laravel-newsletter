@@ -11,23 +11,25 @@
                         </Link>
                     </li>
                     <li class='mx-2'>
-                        <Link href='/news' :class='{ "font-bold underline": $page.component == "News" }'>News</Link>
+                        <Link :href='route("news.index")' :class='{ "font-bold underline": $page.component == "News" }'>
+                        News</Link>
                     </li>
                     <li class='mx-2' v-if='$page.props.auth'>
-                        <Link href='/dashboard' :class='{ "font-bold underline": $page.component == "Dashboard" }'>
+                        <Link href='route("dashboard")'
+                            :class='{ "font-bold underline": $page.component == "Dashboard" }'>
                         Dashboard</Link>
                     </li>
                 </ul>
 
                 <ul class='flex flex-row-reverse'>
                     <li class='mx-2' v-if='$page.props.auth'>
-                        <Link href='/auth/logout' method='post' as='button'>Logout</Link>
+                        <Link :href='route("logout")' method='post' as='button'>Logout</Link>
                     </li>
                     <li class='mx-2' v-if='$page.props.auth'>
                         {{ $page.props.auth.name }}
                     </li>
                     <li class='mx-2' v-else>
-                        <Link href='/auth/login'>Login</Link>
+                        <Link :href='route("login")'>Login</Link>
                     </li>
                 </ul>
             </div>
