@@ -15,7 +15,7 @@
                         News</Link>
                     </li>
                     <li class='mx-2' v-if='$page.props.auth'>
-                        <Link href='route("dashboard")'
+                        <Link :href='route("dashboard")'
                             :class='{ "font-bold underline": $page.component == "Dashboard" }'>
                         Dashboard</Link>
                     </li>
