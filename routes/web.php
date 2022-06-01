@@ -39,5 +39,5 @@ Route::resource('news', NewsController::class)->only(['show', 'index'])->scoped(
 
 Route::middleware('auth')->group(function () {
     Route::resource('news', NewsController::class)->except(['show', 'index']);
-    Route::get('dashboard', DashboardController::class);
+    Route::get('dashboard', DashboardController::class)->name('dashboard');
 });
