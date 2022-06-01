@@ -12,7 +12,7 @@
                     <li class='mx-2'>
                         <Link href='/news' :class='{ "font-bold underline": $page.component == "News" }'>News</Link>
                     </li>
-                    <li class='mx-2'>
+                    <li class='mx-2' v-if='$page.props.auth'>
                         <Link href='/dashboard' :class='{ "font-bold underline": $page.component == "Dashboard" }'>
                         Dashboard</Link>
                     </li>
