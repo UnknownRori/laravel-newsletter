@@ -18,15 +18,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
 
 Route::prefix('auth')->group(function () {
     Route::middleware('guest')->group(function () {
         Route::get('login', [AuthController::class, 'login'])->name('login');
-        Route::post('auth', [AuthController::class, 'auth']);
+        Route::post('auth', [AuthController::class, 'auth'])->name('auth');
 
-        Route::get('signup', [UserController::class, 'create']);
-        Route::post('signup', [UserController::class, 'store']);
+        Route::name('user.')->group(function () {
+            Route::get('signup', [UserController::class, 'create'])->name('create');
+            Route::post('signup', [UserController::class, 'store'])->name('store');
+        });
     });
     Route::post('logout', [AuthController::class, 'logout'])->middleware('auth');
 });

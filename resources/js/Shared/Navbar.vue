@@ -7,7 +7,8 @@
             <div class='flex flex-row items-center justify-between w-[100%] mx-4'>
                 <ul class='flex flex-row'>
                     <li class='mx-2'>
-                        <Link href='/' :class='{ "font-bold underline": $page.component == "Home" }'>Home</Link>
+                        <Link :href='route("home")' :class='{ "font-bold underline": $page.component == "Home" }'>Home
+                        </Link>
                     </li>
                     <li class='mx-2'>
                         <Link href='/news' :class='{ "font-bold underline": $page.component == "News" }'>News</Link>
@@ -35,6 +36,7 @@
 </template>
 
 <script>
+import Route from '../../../vendor/tightenco/ziggy/src/js/Route';
 import { Link } from '@inertiajs/inertia-vue3';
 import { defineComponent } from 'vue';
 

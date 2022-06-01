@@ -19818,13 +19818,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var _vendor_tightenco_ziggy_src_js_Route__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../vendor/tightenco/ziggy/src/js/Route */ "./vendor/tightenco/ziggy/src/js/Route.js");
+/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue__WEBPACK_IMPORTED_MODULE_1__.defineComponent)({
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue__WEBPACK_IMPORTED_MODULE_2__.defineComponent)({
   components: {
-    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.Link
+    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.Link
   }
 }));
 
@@ -20620,7 +20622,7 @@ var _hoisted_6 = {
   "class": "mx-2"
 };
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Home");
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Home ");
 
 var _hoisted_8 = {
   "class": "mx-2"
@@ -20660,7 +20662,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("nav", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/",
+    href: _ctx.route("home"),
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)({
       "font-bold underline": _ctx.$page.component == "Home"
     })
@@ -20673,7 +20675,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["class"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  , ["href", "class"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: "/news",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)({
       "font-bold underline": _ctx.$page.component == "News"
@@ -20807,13 +20809,186 @@ __webpack_require__.r(__webpack_exports__);
       render: function render() {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.h)(App, props);
       }
-    }).use(plugin).mount(el);
+    }).use(plugin).mixin({
+      methods: {
+        route: window.route
+      }
+    }).mount(el);
   }
 });
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_2__.InertiaProgress.init({
   color: 'rgb(0, 2, 157)',
   showSpinner: true
 });
+
+/***/ }),
+
+/***/ "./vendor/tightenco/ziggy/src/js/Route.js":
+/*!************************************************!*\
+  !*** ./vendor/tightenco/ziggy/src/js/Route.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Route)
+/* harmony export */ });
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! qs */ "./node_modules/qs/lib/index.js");
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_0__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+
+/**
+ * A Laravel route. This class represents one route and its configuration and metadata.
+ */
+
+var Route = /*#__PURE__*/function () {
+  /**
+   * @param {String} name - Route name.
+   * @param {Object} definition - Route definition.
+   * @param {Object} config - Ziggy configuration.
+   */
+  function Route(name, definition, config) {
+    var _definition$bindings, _definition$wheres;
+
+    _classCallCheck(this, Route);
+
+    this.name = name;
+    this.definition = definition;
+    this.bindings = (_definition$bindings = definition.bindings) !== null && _definition$bindings !== void 0 ? _definition$bindings : {};
+    this.wheres = (_definition$wheres = definition.wheres) !== null && _definition$wheres !== void 0 ? _definition$wheres : {};
+    this.config = config;
+  }
+  /**
+   * Get a 'template' of the complete URL for this route.
+   *
+   * @example
+   * https://{team}.ziggy.dev/user/{user}
+   *
+   * @return {String} Route template.
+   */
+
+
+  _createClass(Route, [{
+    key: "template",
+    get: function get() {
+      // If  we're building just a path there's no origin, otherwise: if this route has a
+      // domain configured we construct the origin with that, if not we use the app URL
+      var origin = !this.config.absolute ? '' : this.definition.domain ? "".concat(this.config.url.match(/^\w+:\/\//)[0]).concat(this.definition.domain).concat(this.config.port ? ":".concat(this.config.port) : '') : this.config.url;
+      return "".concat(origin, "/").concat(this.definition.uri).replace(/\/+$/, '');
+    }
+    /**
+     * Get an array of objects representing the parameters that this route accepts.
+     *
+     * @example
+     * [{ name: 'team', required: true }, { name: 'user', required: false }]
+     *
+     * @return {Array} Parameter segments.
+     */
+
+  }, {
+    key: "parameterSegments",
+    get: function get() {
+      var _this$template$match$, _this$template$match;
+
+      return (_this$template$match$ = (_this$template$match = this.template.match(/{[^}?]+\??}/g)) === null || _this$template$match === void 0 ? void 0 : _this$template$match.map(function (segment) {
+        return {
+          name: segment.replace(/{|\??}/g, ''),
+          required: !/\?}$/.test(segment)
+        };
+      })) !== null && _this$template$match$ !== void 0 ? _this$template$match$ : [];
+    }
+    /**
+     * Get whether this route's template matches the given URL.
+     *
+     * @param {String} url - URL to check.
+     * @return {Object|false} - If this route matches, returns the matched parameters.
+     */
+
+  }, {
+    key: "matchesUrl",
+    value: function matchesUrl(url) {
+      var _this = this;
+
+      if (!this.definition.methods.includes('GET')) return false; // Transform the route's template into a regex that will match a hydrated URL,
+      // by replacing its parameter segments with matchers for parameter values
+
+      var pattern = this.template.replace(/(\/?){([^}?]*)(\??)}/g, function (_, slash, segment, optional) {
+        var _this$wheres$segment;
+
+        var regex = "(?<".concat(segment, ">").concat(((_this$wheres$segment = _this.wheres[segment]) === null || _this$wheres$segment === void 0 ? void 0 : _this$wheres$segment.replace(/(^\^)|(\$$)/g, '')) || '[^/?]+', ")");
+        return optional ? "(".concat(slash).concat(regex, ")?") : "".concat(slash).concat(regex);
+      }).replace(/^\w+:\/\//, '');
+
+      var _url$replace$split = url.replace(/^\w+:\/\//, '').split('?'),
+          _url$replace$split2 = _slicedToArray(_url$replace$split, 2),
+          location = _url$replace$split2[0],
+          query = _url$replace$split2[1];
+
+      var matches = new RegExp("^".concat(pattern, "/?$")).exec(location);
+      return matches ? {
+        params: matches.groups,
+        query: (0,qs__WEBPACK_IMPORTED_MODULE_0__.parse)(query)
+      } : false;
+    }
+    /**
+     * Hydrate and return a complete URL for this route with the given parameters.
+     *
+     * @param {Object} params
+     * @return {String}
+     */
+
+  }, {
+    key: "compile",
+    value: function compile(params) {
+      var _this2 = this;
+
+      var segments = this.parameterSegments;
+      if (!segments.length) return this.template;
+      return this.template.replace(/{([^}?]+)(\??)}/g, function (_, segment, optional) {
+        var _params$segment2, _params$segment3;
+
+        // If the parameter is missing but is not optional, throw an error
+        if (!optional && [null, undefined].includes(params[segment])) {
+          throw new Error("Ziggy error: '".concat(segment, "' parameter is required for route '").concat(_this2.name, "'."));
+        }
+
+        if (segments[segments.length - 1].name === segment && _this2.wheres[segment] === '.*') {
+          var _params$segment;
+
+          return encodeURIComponent((_params$segment = params[segment]) !== null && _params$segment !== void 0 ? _params$segment : '').replace(/%2F/g, '/');
+        }
+
+        if (_this2.wheres[segment] && !new RegExp("^".concat(optional ? "(".concat(_this2.wheres[segment], ")?") : _this2.wheres[segment], "$")).test((_params$segment2 = params[segment]) !== null && _params$segment2 !== void 0 ? _params$segment2 : '')) {
+          throw new Error("Ziggy error: '".concat(segment, "' parameter does not match required format '").concat(_this2.wheres[segment], "' for route '").concat(_this2.name, "'."));
+        }
+
+        return encodeURIComponent((_params$segment3 = params[segment]) !== null && _params$segment3 !== void 0 ? _params$segment3 : '');
+      }).replace(/\/+$/, '');
+    }
+  }]);
+
+  return Route;
+}();
+
+
 
 /***/ }),
 
@@ -28545,6 +28720,18 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	
