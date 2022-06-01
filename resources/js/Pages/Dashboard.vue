@@ -5,6 +5,12 @@
     </Head>
     <Layouts>
         <section class='mt-5'>
+            <div class="my-3">
+                <Link :href='route("news.create")' class='rounded bg-sky-300 hover:bg-sky-500 shadow-md p-2 text-white'>
+                New
+                Posts</Link>
+            </div>
+
             <table class='w-full shadow-lg'>
                 <thead class='bg-sky-400 ring-1 ring-sky-200 rounded text-white'>
                     <tr class='ring-1 ring-sky-200'>
@@ -25,12 +31,12 @@
 
 <script>
 import { defineComponent } from 'vue';
-import { Head } from '@inertiajs/inertia-vue3';
+import { Head, Link } from '@inertiajs/inertia-vue3';
 import Layouts from '../Layouts/Layouts.vue';
 import NewsItem from '../Components/Dashboard/NewsItem.vue';
 
 export default defineComponent({
-    components: { Head, Layouts, NewsItem },
+    components: { Head, Layouts, NewsItem, Link },
     props: {
         news: Object
     },
