@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreUserRequest;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -32,9 +35,14 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUserRequest $request)
     {
-        //
+        $credentials = $request->validated();
+
+        if (User::create($credentials))
+            if (Auth::attempt($credentials)) return redirect('/');
+            else return redirect('/auth/login')->with('error', 'Failed to authenticate!');
+        else return redirect('/auth/signup')->with('error', 'Failed to register user!');
     }
 
     /**
