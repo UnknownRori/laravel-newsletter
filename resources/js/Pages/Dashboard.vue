@@ -6,8 +6,8 @@
     <Layouts>
         <section class='mt-5'>
             <table class='w-full shadow-lg'>
-                <thead class='bg-sky-400 ring=1 ring-sky-500 rounded text-white'>
-                    <tr class='border-2 border-sky-300'>
+                <thead class='bg-sky-400 ring-1 ring-sky-200 rounded text-white'>
+                    <tr class='ring-1 ring-sky-200'>
                         <td class='ring-1 ring-sky-200 p-2 text-center'>ID</td>
                         <td class='ring-1 ring-sky-200 p-2 text-center'>Title</td>
                         <td class='ring-1 ring-sky-200 p-2 text-center'>Body</td>
