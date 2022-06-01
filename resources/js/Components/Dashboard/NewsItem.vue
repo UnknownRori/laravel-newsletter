@@ -10,7 +10,14 @@
             {{ body.slice(0, 50) }}
         </td>
         <td class='border-2 ring-1 ring-sky-400 p-2'>
-            Action
+            <div class='w-full'>
+                <button class='bg-sky-400 ring-1 ring-sky-200 rounded p-2 text-white flex m-auto'>
+                    Action
+                </button>
+                <div class='fixed bg-white rounded ring-1 ring-gray-100 min-w-[100px] shadow-md p-2'>
+                    <!--  -->
+                </div>
+            </div>
         </td>
     </tr>
 </template>

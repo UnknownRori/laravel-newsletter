@@ -462,6 +462,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(3 105 161 / var(--tw-bg-opacity));
 }
+.fixed {
+  position: fixed;
+}
 .m-auto {
   margin: auto;
 }
@@ -508,6 +511,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-\[100\%\] {
   width: 100%;
+}
+.min-w-\[40px\] {
+  min-width: 40px;
+}
+.min-w-\[10px\] {
+  min-width: 10px;
+}
+.min-w-\[100px\] {
+  min-width: 100px;
 }
 .flex-row {
   flex-direction: row;
@@ -639,6 +651,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ring-sky-500 {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(14 165 233 / var(--tw-ring-opacity));
+}
+.ring-gray-100 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(243 244 246 / var(--tw-ring-opacity));
 }
 
 
