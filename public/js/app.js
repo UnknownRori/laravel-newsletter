@@ -19871,20 +19871,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "border-2 border-sky-300"
+  "class": "border-2 border-sky-100"
 };
 var _hoisted_2 = {
-  "class": "border-2 border-sky-300 p-2 text-center"
+  "class": "border-2 ring-1 ring-sky-400 p-2 text-center"
 };
 var _hoisted_3 = {
-  "class": "border-2 border-sky-300 p-2"
+  "class": "border-2 ring-1 ring-sky-400 p-2"
 };
 var _hoisted_4 = {
-  "class": "border-2 border-sky-300 p-2"
+  "class": "border-2 ring-1 ring-sky-400 p-2"
 };
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "border-2 border-sky-300 p-2"
+  "class": "border-2 ring-1 ring-sky-400 p-2"
 }, " Action ", -1
 /* HOISTED */
 );
@@ -20037,27 +20037,27 @@ var _hoisted_2 = {
   "class": "mt-5"
 };
 var _hoisted_3 = {
-  "class": "w-full shadow-md text-white"
+  "class": "w-full shadow-lg"
 };
 
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", {
-  "class": "bg-sky-700 border-sky-300 rounded"
+  "class": "bg-sky-400 ring=1 ring-sky-500 rounded text-white"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", {
   "class": "border-2 border-sky-300"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "border-2 border-sky-300 p-2 text-center"
+  "class": "ring-1 ring-sky-200 p-2 text-center"
 }, "ID"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "border-2 border-sky-300 p-2 text-center"
+  "class": "ring-1 ring-sky-200 p-2 text-center"
 }, "Title"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "border-2 border-sky-300 p-2 text-center"
+  "class": "ring-1 ring-sky-200 p-2 text-center"
 }, "Body"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "border-2 border-sky-300 p-2 text-center"
+  "class": "ring-1 ring-sky-200 p-2 text-center"
 }, "Action")])], -1
 /* HOISTED */
 );
 
 var _hoisted_5 = {
-  "class": "bg-sky-500 rounded"
+  "class": "bg-sky-100 rounded"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
@@ -20623,6 +20623,7 @@ var _hoisted_8 = {
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("News");
 
 var _hoisted_10 = {
+  key: 0,
   "class": "mx-2"
 };
 
@@ -20680,7 +20681,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["class"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  , ["class"])]), _ctx.$page.props.auth ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: "/dashboard",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)({
       "font-bold underline": _ctx.$page.component == "Dashboard"
@@ -20694,7 +20695,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["class"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_12, [_ctx.$page.props.auth ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  , ["class"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_12, [_ctx.$page.props.auth ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: "/auth/logout",
     method: "post",
     as: "button"

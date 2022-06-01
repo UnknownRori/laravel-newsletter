@@ -1,15 +1,15 @@
 <template>
-    <tr class='border-2 border-sky-300'>
-        <td class='border-2 border-sky-300 p-2 text-center'>
+    <tr class='border-2 border-sky-100'>
+        <td class='border-2 ring-1 ring-sky-400 p-2 text-center'>
             {{ id }}
         </td>
-        <td class='border-2 border-sky-300 p-2'>
+        <td class='border-2 ring-1 ring-sky-400 p-2'>
             {{ title }}
         </td>
-        <td class='border-2 border-sky-300 p-2'>
+        <td class='border-2 ring-1 ring-sky-400 p-2'>
             {{ body.slice(0, 50) }}
         </td>
-        <td class='border-2 border-sky-300 p-2'>
+        <td class='border-2 ring-1 ring-sky-400 p-2'>
             Action
         </td>
     </tr>

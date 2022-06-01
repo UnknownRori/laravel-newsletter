@@ -5,16 +5,16 @@
     </Head>
     <Layouts>
         <section class='mt-5'>
-            <table class='w-full shadow-md text-white'>
-                <thead class='bg-sky-700 border-sky-300 rounded'>
+            <table class='w-full shadow-lg'>
+                <thead class='bg-sky-400 ring=1 ring-sky-500 rounded text-white'>
                     <tr class='border-2 border-sky-300'>
-                        <td class='border-2 border-sky-300 p-2 text-center'>ID</td>
-                        <td class='border-2 border-sky-300 p-2 text-center'>Title</td>
-                        <td class='border-2 border-sky-300 p-2 text-center'>Body</td>
-                        <td class='border-2 border-sky-300 p-2 text-center'>Action</td>
+                        <td class='ring-1 ring-sky-200 p-2 text-center'>ID</td>
+                        <td class='ring-1 ring-sky-200 p-2 text-center'>Title</td>
+                        <td class='ring-1 ring-sky-200 p-2 text-center'>Body</td>
+                        <td class='ring-1 ring-sky-200 p-2 text-center'>Action</td>
                     </tr>
                 </thead>
-                <tbody class='bg-sky-500 rounded' v-for='post in news'>
+                <tbody class='bg-sky-100 rounded' v-for='post in news'>
                     <NewsItem :id='post.id' :body='post.body' :title='post.title' />
                 </tbody>
             </table>
