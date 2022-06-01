@@ -17,6 +17,7 @@
     }
 
     .form-control>button {
-        @apply bg-sky-400 hover:bg-sky-700 text-white rounded ring-1 ring-sky-200 p-2 w-16 text-center;
+        @apply bg-sky-400 hover:bg-sky-700 text-white rounded ring-1 ring-sky-200 p-2 w-20 text-center;
     }
 }
+
