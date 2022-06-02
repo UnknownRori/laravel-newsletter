@@ -13,6 +13,7 @@ class StoreNewsRequest extends FormRequest
      */
     public function authorize()
     {
+        if (auth()->check()) return true;
         return false;
     }
 
@@ -24,7 +25,8 @@ class StoreNewsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => ['required', 'string'],
+            'body' => ['required', 'string'],
         ];
     }
 }

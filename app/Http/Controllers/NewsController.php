@@ -38,7 +38,10 @@ class NewsController extends Controller
      */
     public function store(StoreNewsRequest $request)
     {
-        //
+        $validated = $request->validated();
+        $validated['user_id'] = auth()->user()->id;
+        if (News::create($validated)) return redirect()->route('dashboard');
+        session()->flash('error', 'Failed to create post');
     }
 
     /**
@@ -81,7 +84,10 @@ class NewsController extends Controller
      */
     public function update(UpdateNewsRequest $request, News $news)
     {
-        //
+        $validated = $request->validated();
+        $news->fill($validated);
+        if ($news->save()) return redirect()->route('dashboard');
+        session()->flash('error', 'Failed to update');
     }
 
     /**

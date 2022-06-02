@@ -13,7 +13,7 @@ class UpdateNewsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return $this->user()->id == $this->news->user_id;
     }
 
     /**
@@ -24,7 +24,8 @@ class UpdateNewsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => ['required', 'string'],
+            'body' => ['required', 'string'],
         ];
     }
 }

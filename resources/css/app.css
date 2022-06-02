@@ -16,8 +16,13 @@
         @apply p-2 border-2 border-slate-200 rounded bg-gray-100;
     }
 
+    .form-control>textarea {
+        @apply p-2 border-2 border-slate-200 rounded bg-gray-100;
+    }
+
     .form-control>button {
         @apply bg-sky-400 hover:bg-sky-700 text-white rounded ring-1 ring-sky-200 p-2 w-20 text-center;
     }
 }
+
 
