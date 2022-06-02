@@ -39,8 +39,7 @@ class NewsController extends Controller
     public function store(StoreNewsRequest $request)
     {
         $validated = $request->validated();
-        $validated['user_id'] = auth()->user()->id;
-        if (News::create($validated)) return redirect()->route('dashboard');
+        if (auth()->user()->news()->create($validated)) return redirect()->route('dashboard');
         session()->flash('error', 'Failed to create post');
     }
 
