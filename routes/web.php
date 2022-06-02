@@ -33,11 +33,11 @@ Route::prefix('auth')->group(function () {
     Route::post('logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 });
 
-Route::resource('news', NewsController::class)->only(['show', 'index'])->scoped([
-    'news' => 'slug'
-]);
-
 Route::middleware('auth')->group(function () {
     Route::resource('news', NewsController::class)->except(['show', 'index']);
     Route::get('dashboard', DashboardController::class)->name('dashboard');
 });
+
+Route::resource('news', NewsController::class)->only(['show', 'index'])->scoped([
+    'news' => 'slug'
+]);
