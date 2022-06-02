@@ -7,7 +7,7 @@
             {{ title }}
         </td>
         <td class='border-2 ring-1 ring-sky-400 p-2'>
-            {{ body.slice(0, 50) }}
+            {{ body }}
         </td>
         <td class='border-2 ring-1 ring-sky-400 p-2'>
             <div class='w-full'>
