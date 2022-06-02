@@ -27,7 +27,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return inertia('NewsForm');
     }
 
     /**
@@ -63,7 +63,13 @@ class NewsController extends Controller
      */
     public function edit(News $news)
     {
-        //
+        if ($news->user->id != auth()->user()->id) abort(401);
+
+        return inertia('NewsForm', [
+            'id' => $news->id,
+            'title' => $news->title,
+            'body' => $news->body,
+        ]);
     }
 
     /**
