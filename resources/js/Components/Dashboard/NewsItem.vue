@@ -25,21 +25,16 @@
         </td>
     </tr>
 </template>
-
-<script>
+<script setup>
 import { Link } from '@inertiajs/inertia-vue3';
-import { defineComponent, ref } from "vue";
+import { defineProps, ref } from 'vue';
 
-export default defineComponent({
-    components: { Link },
-    props: {
-        id: Number,
-        title: String,
-        body: String,
-    },
-    setup() {
-        let menu = ref(false);
-        return { menu };
-    }
-});
+const props = defineProps({
+    id: Number,
+    title: String,
+    body: String,
+})
+
+const menu = ref(false);
+
 </script>

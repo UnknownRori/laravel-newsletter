@@ -29,17 +29,14 @@
 
 </template>
 
-<script>
-import { defineComponent } from 'vue';
+<script setup>
+import { defineProps } from 'vue';
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import Layouts from '../Layouts/Layouts.vue';
 import NewsItem from '../Components/Dashboard/NewsItem.vue';
 
-export default defineComponent({
-    components: { Head, Layouts, NewsItem, Link },
-    props: {
-        news: Object
-    },
+const props = defineProps({
+    news: Object
 });
 
 </script>

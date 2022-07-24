@@ -8,11 +8,7 @@
     </section>
 </template>
 
-<script>
+<script setup>
 import Navbar from '../Shared/Navbar';
-import { defineComponent } from 'vue';
 
-export default defineComponent({
-    components: { Navbar }
-});
 </script>

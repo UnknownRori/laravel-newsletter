@@ -10,18 +10,15 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import { Link } from '@inertiajs/inertia-vue3';
-import { defineComponent } from 'vue';
+import { defineProps } from 'vue';
 
-export default defineComponent({
-    components: { Link },
-    props: {
-        id: Number,
-        title: String,
-        slug: String,
-        body: String,
-        user: Object
-    },
-});
+const props = defineProps({
+    id: Number,
+    title: String,
+    slug: String,
+    body: String,
+    user: Object
+})
 </script>

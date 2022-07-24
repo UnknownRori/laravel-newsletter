@@ -8,15 +8,12 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import { Link } from '@inertiajs/inertia-vue3'
-import { defineComponent } from "vue";
+import { defineProps } from 'vue';
 
-export default defineComponent({
-    components: { Link },
-    props: {
-        next_page_url: String,
-        prev_page_url: String
-    }
+const props = defineProps({
+    next_page_url: String,
+    prev_page_url: String
 });
 </script>
