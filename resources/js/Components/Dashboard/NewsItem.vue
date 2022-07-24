@@ -16,7 +16,7 @@
                 </button>
                 <div v-if='menu'
                     class='absolute flex flex-col bg-white rounded ring-1 ring-gray-100 min-w-[100px] shadow-md p-2'>
-                    <Link class='text-left p-1' :href='route("news.show", { id: id })'>Show</Link>
+                    <Link class='text-left p-1' :href='route("news.show", { id: slug })'>Show</Link>
                     <Link class='text-left p-1' :href='route("news.edit", { id: id })'>Edit</Link>
                     <Link class='text-left p-1' :href='route("news.destroy", { id: id })' method='delete' as='button'>
                     Delete</Link>
@@ -32,6 +32,7 @@ import { defineProps, ref } from 'vue';
 const props = defineProps({
     id: Number,
     title: String,
+    slug: String,
     body: String,
 })
 

@@ -21,7 +21,7 @@
                     </tr>
                 </thead>
                 <tbody class='bg-sky-100 rounded' v-for='post in news'>
-                    <NewsItem :id='post.id' :body='post.body' :title='post.title' />
+                    <NewsItem :id='post.id' :body='post.body' :title='post.title' :slug='post.slug' />
                 </tbody>
             </table>
         </section>
