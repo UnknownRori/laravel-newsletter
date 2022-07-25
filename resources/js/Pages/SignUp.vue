@@ -45,24 +45,14 @@
     </Layouts>
 </template>
 
-<script>
+<script setup>
 import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
-import { defineComponent } from 'vue';
+import { defineProps } from 'vue';
 import Layouts from '../Layouts/Layouts';
 
-export default defineComponent({
-    components: { Head, Link, Layouts },
-    setup() {
-        const form = useForm({
-            name: '',
-            password: '',
-            email: '',
-        });
-
-        return {
-            form
-        };
-    }
+const form = useForm({
+    name: '',
+    password: '',
+    email: '',
 });
-
 </script>

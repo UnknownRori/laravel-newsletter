@@ -21,7 +21,7 @@
                     </tr>
                 </thead>
                 <tbody class='bg-sky-100 rounded' v-for='post in news'>
-                    <NewsItem :id='post.id' :body='post.body' :title='post.title' />
+                    <NewsItem :id='post.id' :body='post.body' :title='post.title' :slug='post.slug' />
                 </tbody>
             </table>
         </section>
@@ -29,17 +29,14 @@
 
 </template>
 
-<script>
-import { defineComponent } from 'vue';
+<script setup>
+import { defineProps } from 'vue';
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import Layouts from '../Layouts/Layouts.vue';
 import NewsItem from '../Components/Dashboard/NewsItem.vue';
 
-export default defineComponent({
-    components: { Head, Layouts, NewsItem, Link },
-    props: {
-        news: Object
-    },
+const props = defineProps({
+    news: Object
 });
 
 </script>

@@ -8,6 +8,11 @@ use App\Http\Requests\UpdateNewsRequest;
 
 class NewsController extends Controller
 {
+    public function __construct()
+    {
+        $this->authorizeResource(News::class, 'news');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -65,8 +70,6 @@ class NewsController extends Controller
      */
     public function edit(News $news)
     {
-        if ($news->user->id != auth()->user()->id) abort(401);
-
         return inertia('NewsForm', [
             'id' => $news->id,
             'title' => $news->title,

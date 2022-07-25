@@ -38,26 +38,21 @@
 
 </template>
 
-<script>
+<script setup>
 import { Head, useForm } from '@inertiajs/inertia-vue3';
-import { defineComponent } from 'vue';
+import { defineProps } from 'vue';
 import Layouts from '../Layouts/Layouts.vue'
 
-export default defineComponent({
-    components: { Head, Layouts },
-    props: {
-        id: Number,
-        title: String,
-        body: String,
-    },
-    setup(props) {
-        const form = useForm({
-            id: props.id ? props.id : null,
-            title: props.title ? props.title : '',
-            body: props.body ? props.body : '',
-        })
+const props = defineProps({
+    id: Number,
+    title: String,
+    body: String,
+})
 
-        return { form };
-    }
-});
+const form = useForm({
+    id: props.id ? props.id : null,
+    title: props.title ? props.title : '',
+    body: props.body ? props.body : '',
+})
+
 </script>

@@ -40,22 +40,12 @@
 
 </template>
 
-<script>
+<script setup>
 import { Head, Link, useForm } from "@inertiajs/inertia-vue3";
 import Layouts from "../Layouts/Layouts.vue";
-import { defineComponent } from "vue";
 
-export default defineComponent({
-    components: { Head, Link, Layouts },
-    setup() {
-        const form = useForm({
-            name: '',
-            password: '',
-        });
-
-        return {
-            form
-        };
-    }
+const form = useForm({
+    name: '',
+    password: '',
 });
 </script>

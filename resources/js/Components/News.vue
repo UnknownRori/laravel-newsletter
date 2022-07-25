@@ -7,15 +7,13 @@
     </div>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script setup>
+import { defineProps } from 'vue';
 import Post from "./Post.vue";
 import PaginateButton from "../Shared/PaginateButton.vue";
 
-export default defineComponent({
-    components: { Post, PaginateButton },
-    props: {
-        news: Object
-    }
-})
+const props = defineProps({
+    news: Object
+});
+
 </script>

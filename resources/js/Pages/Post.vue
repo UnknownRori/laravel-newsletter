@@ -19,17 +19,14 @@
     </Layouts>
 </template>
 
-<script>
+<script setup>
 import { Head } from "@inertiajs/inertia-vue3";
-import { defineComponent } from "vue";
+import { defineProps } from "vue";
 import Layouts from "../Layouts/Layouts.vue";
 
-export default defineComponent({
-    components: { Head, Layouts },
-    props: {
-        news: Object,
-        author: String,
-    },
-})
+const props = defineProps({
+    news: Object,
+    author: String,
+});
 
 </script>

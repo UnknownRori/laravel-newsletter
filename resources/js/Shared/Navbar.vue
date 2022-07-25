@@ -37,12 +37,8 @@
     </nav>
 </template>
 
-<script>
+<script setup>
 import Route from '../../../vendor/tightenco/ziggy/src/js/Route';
 import { Link } from '@inertiajs/inertia-vue3';
-import { defineComponent } from 'vue';
 
-export default defineComponent({
-    components: { Link }
-});
 </script>
