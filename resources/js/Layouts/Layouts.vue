@@ -9,6 +9,6 @@
 </template>
 
 <script setup>
-import Navbar from '../Shared/Navbar';
+import Navbar from '../Shared/Navbar.vue';
 
 </script>
