@@ -16,7 +16,7 @@ class NewsPolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function viewAny(User $user)
+    public function viewAny(?User $user)
     {
         return true;
     }
@@ -28,7 +28,7 @@ class NewsPolicy
      * @param  \App\Models\News  $news
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, News $news)
+    public function view(?User $user, News $news)
     {
         return true;
     }
