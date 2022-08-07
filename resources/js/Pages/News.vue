@@ -13,7 +13,7 @@
 <script setup>
 import { Head } from "@inertiajs/inertia-vue3";
 import { defineProps } from "vue";
-import Layouts from '../Layouts/Layouts';
+import Layouts from '../Layouts/Layouts.vue';
 import News from "../Components/News.vue";
 
 const props = defineProps({
